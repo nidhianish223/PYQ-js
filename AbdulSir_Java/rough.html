@@ -1,0 +1,85 @@
+<!-- The Tribonacci sequence is a series of numbers where each number is the sum of the three preceding ones. When starting with 0, 0 and 1, the first 10 numbers in the sequence are 0, 0, 1, 1, 2, 4, 7, 13, 24, 44.
+
+Given an array containing the first three numbers of a Tribonacci sequence, and an integer representing the length of the sequence, return an array containing the sequence of the given length.
+
+Your function should handle sequences of any length greater than or equal to zero.
+If the length is zero, return an empty array.
+Note that the starting numbers are part of the sequence.
+
+solution:
+
+function tribonacci(start, length) {
+    let result = [];
+
+    if (length === 0) {
+        return result;
+    }
+
+    // Starting numbers add karo
+    for (let i = 0; i < 3 && i < length; i++) {
+        result.push(start[i]);
+    }
+
+    // Next numbers generate karo
+    while (result.length < length) {
+        let n = result.length;
+
+        let next = result[n - 1] + result[n - 2] + result[n - 3];
+
+        result.push(next);
+    }
+
+    return result;
+}
+
+console.log(tribonacci([0, 0, 1], 10));
+=--------------------------------------------------------
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>onblur example </title>
+  </head>
+  <body>
+    Enter your name:
+    <input type="text" id="name" onblur="changeToUpper()">
+    <script>
+      function changeToUpper(){
+        let x = document.getElementById("name");
+       x. value= x.value.toUpperCase();
+      }
+    </script>
+   
+  </body>
+</html>
+--------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>example </title>
+  </head>
+  <body>
+    <h1 onClick="this.innerHTML='IGNOU'">Click me </h1>
+
+   
+  </body>
+</html>
+------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>example </title>
+  </head>
+  <body>
+    <p id="pl">Lets learn event handling </p>
+<input type="button"onClick="changeText()" value="changeText">
+<script>
+  function changeText(){
+    document.getElementById("pl").innerHTML= 'I LOVE MY HUSBAND';
+  }
+</script>
+
+   
+  </body>
+</html>
+-------------------------------------- -->
+

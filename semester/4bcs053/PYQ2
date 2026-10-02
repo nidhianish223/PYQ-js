@@ -1,0 +1,485 @@
+What is Document Object Model (DOM) ?
+Draw the node three of an HTML DOM.
+
+## Document Object Model (DOM)
+
+### Definition
+
+**DOM (Document Object Model)** is a programming interface that represents an HTML or XML document as a **tree of objects or nodes**.
+
+It allows JavaScript to **access, modify, add, or delete** HTML elements, attributes, and content dynamically.
+
+In simple words, **DOM converts an HTML document into a tree structure**, where every HTML element is represented as a node.
+
+### DOM Tree of an HTML Document
+
+Consider the following HTML:
+
+```html
+<html>
+    <head>
+        <title>My Page</title>
+    </head>
+    <body>
+        <h1>Hello</h1>
+        <p>Welcome to HTML</p>
+    </body>
+</html>
+```
+
+The DOM tree can be represented as:
+
+```text
+                    Document
+                       |
+                     <html>
+                    /      \
+                 <head>    <body>
+                   |       /    \
+                <title>   <h1>   <p>
+                   |       |      |
+              "My Page"  "Hello" "Welcome to HTML"
+```
+
+### Main Nodes in the DOM Tree
+
+1. **Document Node** – Represents the complete HTML document.
+2. **Element Node** – Represents HTML elements such as `<html>`, `<body>`, `<p>`, etc.
+3. **Attribute Node** – Represents attributes such as `id`, `class`, and `href`.
+4. **Text Node** – Represents the text contained inside HTML elements.
+
+### Uses of DOM
+
+* It allows JavaScript to **change HTML content**.
+* It can **change CSS styles** dynamically.
+* It can **add or remove HTML elements**.
+* It allows JavaScript to respond to **events**, such as clicks and mouse movements.
+
+### Conclusion
+
+The DOM provides a **tree-like representation of an HTML document**. JavaScript uses the DOM to interact with and dynamically modify the structure, content, and style of a web page.
+-----------------------------------------------------------------------------------------------------------
+What is AJAX ? List out the differences
+between AJAX and JavaScript.
+
+## What is AJAX?
+
+**AJAX (Asynchronous JavaScript and XML)** is a web development technique used to **exchange data with a web server without reloading the entire web page**.
+
+AJAX allows a web page to update a part of the page dynamically and asynchronously.
+
+### How AJAX Works
+
+```text
+User Action
+     ↓
+JavaScript / AJAX
+     ↓
+Request sent to Server
+     ↓
+Server processes Request
+     ↓
+Response received
+     ↓
+Only required part of Web Page is updated
+```
+
+### Example
+
+For example, when a user enters a search term on a website, suggestions can appear **without reloading the complete web page**. This can be achieved using AJAX.
+
+## Difference between AJAX and JavaScript
+
+| Basis                    | AJAX                                                                                                | JavaScript                                                                  |
+| ------------------------ | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| **Meaning**              | AJAX stands for Asynchronous JavaScript and XML.                                                    | JavaScript is a scripting/programming language.                             |
+| **Purpose**              | Mainly used for communicating with a server asynchronously and updating web pages.                  | Used to add logic, interactivity and dynamic behaviour to web pages.        |
+| **Page Reload**          | Can update data without reloading the complete page.                                                | Changes made by JavaScript do not necessarily involve server communication. |
+| **Server Communication** | Commonly used to send and receive data from a server.                                               | By itself, JavaScript does not automatically communicate with a server.     |
+| **Technology**           | AJAX is a technique that uses JavaScript along with web APIs such as `XMLHttpRequest` or `fetch()`. | JavaScript is the language used to write the program.                       |
+| **Example**              | Loading new data from a server without refreshing the page.                                         | Changing text, colour, or displaying/hiding an HTML element.                |
+
+### Conclusion
+
+AJAX is **not a separate programming language**. It is a technique that uses JavaScript and web communication mechanisms to exchange data with a server **asynchronously** and update a web page without a complete reload.
+--------------------------------------------------------------------------------------------------
+What is CSS ? Explain embedded style
+sheets with HTML example.
+
+## What is CSS?
+
+**CSS (Cascading Style Sheets)** is a style sheet language used to **define the appearance and layout of HTML web pages**.
+
+CSS is used to control the **colour, font, size, spacing, background, borders, and layout** of HTML elements.
+
+### Embedded Style Sheets
+
+An **Embedded Style Sheet** is a CSS method in which CSS rules are written inside the `<style>` element within the `<head>` section of an HTML document.
+
+It is also called **Internal CSS**.
+
+Embedded CSS is useful when the styles are required for **a single HTML page**.
+
+### Syntax
+
+```html
+<head>
+    <style>
+        selector {
+            property: value;
+        }
+    </style>
+</head>
+```
+
+### Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Embedded CSS Example</title>
+
+    <style>
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        p {
+            color: green;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome to IGNOU</h1>
+    <p>This is an example of Embedded Style Sheet.</p>
+
+</body>
+</html>
+```
+
+### Explanation of Example
+
+1. The `<style>` tag is written inside the `<head>` section.
+2. The `h1` selector applies the CSS to the heading.
+3. `color: blue` makes the heading blue.
+4. `text-align: center` aligns the heading in the centre.
+5. The `p` selector applies the CSS to the paragraph.
+6. `font-size: 18px` changes the size of the paragraph text.
+
+### Advantages of Embedded Style Sheets
+
+* CSS and HTML are contained in the **same HTML document**.
+* It is useful for styling **a single web page**.
+* It is easier to manage than applying styles individually using the `style` attribute.
+* It improves the readability of HTML compared with using many inline styles.
+
+### Conclusion
+
+CSS is used to control the presentation and layout of HTML documents. An **embedded style sheet** places CSS rules inside the `<style>` tag in the `<head>` section and is mainly suitable when styling a single HTML page.
+--------------------------------------------------------------------------------
+Design an WML program to display
+username and password. Make the
+necessary assumptions.
+
+## WML Program to Display Username and Password
+
+### Assumption
+
+We assume that a WAP-enabled mobile device is used to enter a **username and password**. The form contains two input fields and a submit button.
+
+### WML Program
+
+```xml
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"
+"http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+    <card id="login" title="Login">
+
+        <p>
+            Username:
+            <input name="username" type="text"/>
+            <br/>
+
+            Password:
+            <input name="password" type="password"/>
+            <br/>
+
+            <anchor>
+                Login
+                <go href="login.wml" method="post">
+                    <postfield name="username" value="$(username)"/>
+                    <postfield name="password" value="$(password)"/>
+                </go>
+            </anchor>
+        </p>
+
+    </card>
+</wml>
+```
+
+### Explanation
+
+1. `<?xml version="1.0"?>` declares the XML version.
+2. `<wml>` is the root element of a WML document.
+3. `<card>` defines a screen or page displayed on the WAP device.
+4. `<input type="text">` is used to enter the **username**.
+5. `<input type="password">` is used to enter the **password**. The password is normally hidden while typing.
+6. `<anchor>` creates a link/action for the user.
+7. `<go>` specifies the action to be performed when the user selects **Login**.
+8. `<postfield>` sends the username and password to the specified server.
+
+### Expected Output
+
+```text
+-------------------------
+       LOGIN
+-------------------------
+Username: [___________]
+
+Password: [___________]
+
+        [ Login ]
+-------------------------
+```
+
+### Conclusion
+
+WML provides form controls such as `<input>` for accepting user information on **WAP-enabled mobile devices**. The above program creates a simple login form for entering a username and password.
+--------------------------------------------------------------------------------------------------------------
+
+Write a JSP program to fetch the record of
+the student having attributes such as
+name, programme, course code and grade
+from the table stored in database.
+
+## JSP Program to Fetch Student Record from Database
+
+### Assumptions
+
+* Database name: `college`
+* Table name: `student`
+* Table attributes:
+
+  * `name`
+  * `programme`
+  * `course_code`
+  * `grade`
+* MySQL database is used.
+* JDBC driver is available on the server.
+
+### Table Structure
+
+```sql
+CREATE TABLE student (
+    name VARCHAR(50),
+    programme VARCHAR(50),
+    course_code VARCHAR(20),
+    grade VARCHAR(5)
+);
+```
+
+### JSP Program
+
+```jsp
+<%@ page import="java.sql.*" %>
+
+<html>
+<head>
+    <title>Student Record</title>
+</head>
+
+<body>
+
+<h2>Student Record</h2>
+
+<%
+    Connection con = null;
+    Statement stmt = null;
+    ResultSet rs = null;
+
+    try {
+        // Load JDBC driver
+        Class.forName("com.mysql.cj.jdbc.Driver");
+
+        // Establish database connection
+        con = DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/college",
+            "root",
+            "password"
+        );
+
+        // Create statement
+        stmt = con.createStatement();
+
+        // Execute SQL query
+        String query = "SELECT name, programme, course_code, grade FROM student";
+
+        rs = stmt.executeQuery(query);
+%>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Programme</th>
+        <th>Course Code</th>
+        <th>Grade</th>
+    </tr>
+
+<%
+        while (rs.next()) {
+%>
+    <tr>
+        <td><%= rs.getString("name") %></td>
+        <td><%= rs.getString("programme") %></td>
+        <td><%= rs.getString("course_code") %></td>
+        <td><%= rs.getString("grade") %></td>
+    </tr>
+<%
+        }
+
+    } catch (Exception e) {
+        out.println("Error: " + e.getMessage());
+    } finally {
+        try {
+            if (rs != null) rs.close();
+            if (stmt != null) stmt.close();
+            if (con != null) con.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+%>
+
+</table>
+
+</body>
+</html>
+```
+
+### Explanation
+
+1. **Import JDBC package**
+
+   ```jsp
+   <%@ page import="java.sql.*" %>
+   ```
+
+   It provides classes required for database connectivity.
+
+2. **Load JDBC Driver**
+
+   ```java
+   Class.forName("com.mysql.cj.jdbc.Driver");
+   ```
+
+   It loads the MySQL JDBC driver.
+
+3. **Establish Connection**
+
+   ```java
+   DriverManager.getConnection(...)
+   ```
+
+   It connects the JSP program to the MySQL database.
+
+4. **Create Statement**
+
+   ```java
+   stmt = con.createStatement();
+   ```
+
+   It creates an object for executing SQL queries.
+
+5. **Execute Query**
+
+   ```java
+   rs = stmt.executeQuery(query);
+   ```
+
+   It executes the `SELECT` query and stores the result in `ResultSet`.
+
+6. **Fetch Records**
+
+   ```java
+   while (rs.next())
+   ```
+
+   It moves through each record returned by the query.
+
+7. **Display Data**
+
+   ```jsp
+   <%= rs.getString("name") %>
+   ```
+
+   The values of `name`, `programme`, `course_code`, and `grade` are displayed in an HTML table.
+
+8. **Close Resources**
+   The `ResultSet`, `Statement`, and `Connection` are closed after use.
+
+### Sample Output
+
+| Name  | Programme | Course Code | Grade |
+| ----- | --------- | ----------- | ----- |
+| Rahul | BCA       | MCS-207     | A     |
+| Priya | BCA       | MCS-208     | B     |
+| Amit  | BCA       | BCS-053     | A     |
+
+### Conclusion
+
+JSP can use **JDBC (Java Database Connectivity)** to connect to a database, execute SQL queries, retrieve records using `ResultSet`, and display the retrieved student information on a web page.
+------------------------------------------------------------------------------------------------------
+Explain the following WML elements : 3
+(i) <optgroup>
+(ii) <setvar>
+
+## (i) `<optgroup>`
+
+* The `<optgroup>` element is used to **group related options** inside a `<select>` element.
+* It makes a long list of options easier to organize.
+* It has a `title` attribute that specifies the name of the group.
+
+**Example:**
+
+```xml
+<select name="course">
+    <optgroup title="Computer Courses">
+        <option value="bca">BCA</option>
+        <option value="mca">MCA</option>
+    </optgroup>
+</select>
+```
+
+Here, BCA and MCA are grouped under **Computer Courses**.
+
+---
+
+## (ii) `<setvar>`
+
+* The `<setvar>` element is used to **set or change the value of a WML variable**.
+* It is commonly used inside `<go>`, `<prev>`, or `<do>` elements.
+* It has two important attributes:
+
+  * `name` – specifies the variable name.
+  * `value` – specifies the value assigned to the variable.
+
+**Example:**
+
+```xml
+<setvar name="username" value="Nidhi"/>
+```
+
+This statement sets the value of the variable `username` to **Nidhi**.
+
+### In short:
+
+* `<optgroup>` → **Groups related options.**
+* `<setvar>` → **Sets or changes a variable's value.**
+--------------------------------------------------------------------------------

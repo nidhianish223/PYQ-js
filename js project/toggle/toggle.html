@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        button{
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="heading">Hi Nidhi Anish</h1>
+
+    <button id="btn">Click Me</button>
+
+    <script>
+
+        // Select Elements
+        let heading = document.getElementById("heading");
+        let btn = document.getElementById("btn");
+
+        // Add Event
+        btn.addEventListener("click", function () {
+
+            if (heading.innerHTML === "Hi Nidhi Anish") {
+
+                heading.innerHTML = "Welcome to JavaScript";
+
+            } else {
+
+                heading.innerHTML = "Hi Nidhi Anish";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

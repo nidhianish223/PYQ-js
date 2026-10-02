@@ -1,0 +1,464 @@
+Why is web 2.0 more popular ? How does a
+static website differ from a dynamic
+website ? Explain with the help of an
+example.
+
+## Why is Web 2.0 more popular?
+
+**Web 2.0** refers to the second generation of the Web that allows users to **interact, participate, create and share content** rather than only reading information.
+
+Web 2.0 is more popular because:
+
+1. **User Interaction:** Users can interact with websites through comments, likes, reviews, etc.
+2. **User-generated Content:** Users can create and upload their own content such as posts, photos and videos.
+3. **Social Networking:** It supports social media platforms where people can communicate and share information.
+4. **Collaboration:** Many users can work together and share information online.
+5. **Dynamic Content:** Content can be updated frequently according to user activities.
+6. **Rich User Experience:** It provides interactive and attractive interfaces.
+7. **Easy Sharing:** Information, images, videos and other content can be easily shared.
+
+**Example:** Facebook, YouTube, Wikipedia and Google Docs are examples of Web 2.0 applications.
+
+# Static Website vs Dynamic Website
+
+A **static website** displays fixed content, whereas a **dynamic website** generates or changes content according to the user, database or other conditions.
+
+| Basis                | Static Website                           | Dynamic Website                                     |
+| -------------------- | ---------------------------------------- | --------------------------------------------------- |
+| **Content**          | Fixed content                            | Content can change                                  |
+| **Database**         | Usually does not require a database      | Usually uses a database                             |
+| **User Interaction** | Very limited                             | Highly interactive                                  |
+| **Modification**     | Changes require editing HTML files       | Content can be changed through application/database |
+| **Speed**            | Generally faster                         | May be comparatively slower                         |
+| **Technology**       | Mainly HTML and CSS                      | HTML, CSS, JavaScript, PHP, JSP, etc.               |
+| **Example**          | Simple personal/company information page | Amazon, Facebook, online banking                    |
+
+### Example
+
+**Static website:**
+Suppose a college website has a page showing:
+
+> **College Name: ABC College**
+> **Address: Chennai**
+> **Phone: 123456789**
+
+This information remains the same until the HTML file is manually changed. Therefore, it is a **static website**.
+
+**Dynamic website:**
+Suppose an online shopping website displays different products, prices and recommendations depending on the user's search and database information.
+
+For example:
+
+> User searches → **Laptop** → Website displays available laptops, prices, stock and offers.
+
+The content is generated/updated dynamically, so it is a **dynamic website.
+--------------------------------------------------------------------------------------------
+Q2.What is meant by Document Object Model
+in the context of HTML ? Write a program
+using Java script and HTML that changes a
+paragraph showing "Wel come" to
+"Welcome to the University?
+
+## Document Object Model (DOM)
+
+The **Document Object Model (DOM)** is a programming interface for HTML documents. It represents an HTML document as a **tree of objects or nodes**. JavaScript can use the DOM to access, modify, add or delete HTML elements and their content.
+
+For example, JavaScript can use the DOM to change the text, style or attributes of an HTML element.
+
+### Program to change "Wel come" to "Welcome to the University"
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Example</title>
+</head>
+
+<body>
+
+    <p id="message">Wel come</p>
+
+    <button onclick="changeText()">Change Text</button>
+
+    <script>
+        function changeText() {
+            document.getElementById("message").innerHTML =
+                "Welcome to the University.";
+        }
+    </script>
+
+</body>
+</html>
+### Explanation
+
+1. `<p id="message">Wel come</p>` creates a paragraph and gives it the ID **message**.
+2. `document.getElementById("message")` finds the paragraph using its ID.
+3. `.innerHTML` is used to change the content of the paragraph.
+4. When the button is clicked, the `changeText()` function is called.
+5. The paragraph changes from **"Wel come"** to **"Welcome to the University."**
+
+### Output
+
+**Before clicking the button:**
+
+> Wel come
+
+**After clicking the button:**
+
+> Welcome to the University.
+-----------------------------------------------------------------------------------------------------
+Q3. Explain the Box Model of HTML. Write the
+HTML and Style sheet for a text "welcome
+to IGNOU" Which is to be displayed with
+20px margin on all sides padding of 10 on
+all sides, with white font and black
+background color?
+
+## Box Model of HTML
+
+The **Box Model** is a concept in CSS that describes how every HTML element is represented as a rectangular box.
+
+The CSS Box Model consists of four parts:
+
+1. **Content** – The actual text or content of the element.
+2. **Padding** – The space between the content and the border.
+3. **Border** – The boundary around the padding and content.
+4. **Margin** – The space outside the border.
+
+### Box Model Structure
+
+```text
+        ┌─────────────────────────────┐
+        │           Margin            │
+        │   ┌─────────────────────┐   │
+        │   │       Border        │   │
+        │   │  ┌───────────────┐  │   │
+        │   │  │    Padding    │  │   │
+        │   │  │ ┌───────────┐ │  │   │
+        │   │  │ │  Content  │ │  │   │
+        │   │  │ └───────────┘ │  │   │
+        │   │  └───────────────┘  │   │
+        │   └─────────────────────┘   │
+        └─────────────────────────────┘
+```
+
+Thus, the box model can be represented as:
+
+**Content → Padding → Border → Margin
+## HTML and CSS Program
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Box Model</title>
+
+    <style>
+        .welcome {
+            margin: 20px;
+            padding: 10px;
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class="welcome">Welcome to IGNOU</p>
+
+</body>
+</html>
+### Explanation
+
+* `margin: 20px;` → Provides **20px space on all four sides** of the element.
+* `padding: 10px;` → Provides **10px space between the text and its boundary**.
+* `color: white;` → Makes the text **white**.
+* `background-color: black;` → Sets the background color to **black**.
+* `class="welcome"` → Connects the HTML paragraph with the CSS rules.
+
+### Output
+
+The text **"Welcome to IGNOU"** will appear with:
+
+* **20px margin** on all sides
+* **10px padding** on all sides
+* **White text**
+* **Black background**
+---------------------------------------------------------------------------------------
+Q4. what is WAP ? Design a WML program to
+display the profile of an Item having
+attributes: Item ld, Item Name, Item Price
+and Item Quantity?
+
+**WAP (Wireless Application Protocol)** is a communication protocol used to provide Internet and web services to **wireless devices**, such as mobile phones and handheld devices.
+
+It enables a wireless device to communicate with a server through a wireless network.
+
+**WML (Wireless Markup Language)** is a markup language used in WAP applications to create content for wireless devices.
+## WML Program to Display Item Profile
+
+The following WML program displays the **Item ID, Item Name, Item Price and Item Quantity**.
+
+```xml
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"
+"http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+
+    <card id="item" title="Item Profile">
+
+        <p>
+            <b>Item Profile</b><br/>
+            Item ID: I101<br/>
+            Item Name: Laptop<br/>
+            Item Price: Rs. 50000<br/>
+            Item Quantity: 2
+        </p>
+
+    </card>
+
+</wml>
+```
+
+## Explanation
+
+1. `<?xml version="1.0"?>` specifies that the document is an XML document.
+2. `<wml>` is the **root element** of a WML document.
+3. `<card>` defines a screen or page in a WML document.
+4. `id="item"` gives an identifier to the card.
+5. `title="Item Profile"` specifies the title of the card.
+6. `<p>` is used to display the content in paragraph form.
+7. `<br/>` is used to move the next information to a new line.
+8. The program displays four attributes:
+
+   * **Item ID**
+   * **Item Name**
+   * **Item Price**
+   * **Item Quantity**
+
+### Output
+
+```text
+       Item Profile
+
+Item ID: I101
+Item Name: Laptop
+Item Price: Rs. 50000
+Item Quantity: 2
+```-----------------------------------------------------------------------------------------------
+Q5.A Student data is to be represented using XML.
+The information that is to be included is student
+ID, student name, student address (Home and
+Residence) and phone numbers. A student should
+have one or more phone numbers. Perform the
+following activities for the description as above :
+(a) Create a XML document showing records
+of at least two students.
+(b) Create the DTD that verifies the document
+created at part (a)
+
+### (a) XML Document
+
+The following XML document represents the information of two students including their Student ID, Name, Address and one or more Phone Numbers.
+
+```xml
+<?xml version="1.0"?>
+
+<!DOCTYPE students SYSTEM "student.dtd">
+
+<students>
+
+    <student>
+        <studentID>S101</studentID>
+        <studentName>Rahul Kumar</studentName>
+
+        <address>
+            <home>Patna</home>
+            <residence>Chennai</residence>
+        </address>
+
+        <phone>9876543210</phone>
+        <phone>9123456780</phone>
+    </student>
+
+    <student>
+        <studentID>S102</studentID>
+        <studentName>Priya Sharma</studentName>
+
+        <address>
+            <home>Delhi</home>
+            <residence>Mumbai</residence>
+        </address>
+
+        <phone>9988776655</phone>
+    </student>
+
+</students>
+```
+
+### (b) DTD
+
+The DTD below verifies the structure of the XML document.
+
+```dtd
+<!ELEMENT students (student+)>
+
+<!ELEMENT student (studentID, studentName, address, phone+)>
+
+<!ELEMENT studentID (#PCDATA)>
+
+<!ELEMENT studentName (#PCDATA)>
+
+<!ELEMENT address (home, residence)>
+
+<!ELEMENT home (#PCDATA)>
+
+<!ELEMENT residence (#PCDATA)>
+
+<!ELEMENT phone (#PCDATA)>
+```
+
+### Explanation of DTD
+
+1. `students (student+)` means there must be **one or more students**.
+2. `student (studentID, studentName, address, phone+)` defines the structure of each student.
+3. `studentID` and `studentName` contain text data.
+4. `address` contains **home and residence**.
+5. `phone+` means each student must have **one or more phone numbers**.
+6. `#PCDATA` means the element contains **parsed character/text data**.
+
+### Important Symbol
+
+* `+` → **One or more**
+* `*` → **Zero or more**
+* `?` → **Zero or one**
+* `#PCDATA` → **Text data**
+=---------------------------------------------------------------------------------------
+Q6. What is WAP ? How does WAP model
+work ? Explain it with diagram.
+
+WAP (Wireless Application Protocol) is a communication protocol used to provide Internet and web-based services on wireless devices, such as mobile phones and PDAs.
+
+It allows a wireless device to communicate with a web server through a wireless network.
+
+WAP Model
+
+The WAP model is similar to the traditional Web model, but it is specially designed for wireless networks and mobile devices.
+
+WAP Model Diagram
+
+       Mobile / Wireless Device
+                |
+                |  Wireless Network
+                |
+                v
+        +------------------+
+        |    WAP Gateway   |
+        |                  |
+        | Protocol         |
+        | Conversion       |
+        +------------------+
+                |
+                | Internet
+                |
+                v
+        +------------------+
+        |    Web Server    |
+        |                  |
+        |  HTML / WML      |
+        |  Applications    |
+        +------------------+
+		
+		How does the WAP Model Work?
+
+The working of the WAP model can be explained in the following steps:
+
+User Request:
+The user selects a WAP service or enters a URL on the mobile device.
+Wireless Network:
+The request is sent through the wireless network to the WAP Gateway.
+WAP Gateway:
+The gateway acts as a bridge between the wireless device and the Internet. It converts WAP protocols into standard Internet protocols such as HTTP.
+Web Server:
+The request reaches the web server. The server processes the request and generates the required information.
+Response to Gateway:
+The web server sends the requested information back to the WAP Gateway.
+Gateway to Mobile:
+The WAP Gateway converts the response into a form suitable for the wireless device and sends it through the wireless network.
+Display:
+Finally, the mobile device receives and displays the requested information to the user.
+In Simple Words
+
+Mobile → Wireless Network → WAP Gateway → Web Server → WAP Gateway → Mobile..
+-------------------------------------------------------------------------------------------
+Q8. Explain the uses of any five HTML
+elements which are used in form design.
+
+## HTML Elements Used in Form Design
+
+HTML provides various elements for creating forms. A form is used to collect information from users, such as name, email, password, address, etc.
+
+### 1. `<form>` Element
+
+* The `<form>` element is used to create an HTML form.
+* It acts as a container for all form controls.
+* It specifies where and how the form data will be submitted.
+
+**Example:**
+
+```html
+<form action="submit.php" method="post">
+    ...
+</form>
+```
+
+### 2. `<input>` Element
+
+* The `<input>` element is used to create different types of input fields.
+* It can be used for text, password, email, radio buttons, checkboxes, etc.
+
+**Example:**
+
+```html
+<input type="text" name="username">
+<input type="password" name="password">
+```
+
+### 3. `<textarea>` Element
+
+* The `<textarea>` element is used to enter **multiple lines of text**.
+* It is commonly used for comments, feedback, and addresses.
+
+**Example:**
+
+```html
+<textarea name="address" rows="4" cols="30"></textarea>
+```
+
+### 4. `<select>` Element
+
+* The `<select>` element creates a **drop-down list**.
+* It allows the user to select one option from a list.
+
+**Example:**
+
+```html
+<select name="course">
+    <option>BCA</option>
+    <option>MCA</option>
+    <option>BBA</option>
+</select>
+```
+
+### 5. `<button>` Element
+
+* The `<button>` element is used to create a clickable button.
+* It can be used for submitting a form or performing other actions.
+
+**Example:**
+
+```html
+<button type="submit">Submit</button>
+```----------------------------------------------------------------------------------------------
